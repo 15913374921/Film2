@@ -1,7 +1,7 @@
 services:
   - type: web
     name: partner-backend
-    runtime: java
+    runtime: docker
     plan: free
     buildCommand: |
       apt-get update
