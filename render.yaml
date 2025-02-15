@@ -36,15 +36,4 @@ services:
       - key: SPRING_MAIL_PASSWORD
         sync: false
       - key: TMDB_API_KEY
-        sync: false
-
-  - type: web
-    name: partner-frontend
-    runtime: node
-    buildCommand: yarn install && yarn build
-    startCommand: yarn serve
-    envVars:
-      - key: NODE_ENV
-        value: production
-      - key: VITE_API_URL
-        value: https://partner-backend.onrender.com 
+        sync: false 
