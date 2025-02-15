@@ -9,12 +9,24 @@ services:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
       - key: SPRING_DATASOURCE_URL
-        sync: false
+        value: jdbc:mysql://localhost:3306/partner?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8&allowPublicKeyRetrieval=true
       - key: SPRING_DATASOURCE_USERNAME
-        sync: false
+        value: root
       - key: SPRING_DATASOURCE_PASSWORD
-        sync: false
+        value: 123456
       - key: SPRING_REDIS_HOST
-        sync: false
+        value: localhost
+      - key: SPRING_REDIS_PORT
+        value: 6379
       - key: SPRING_REDIS_PASSWORD
-        sync: false 
+        value: ""
+      - key: SPRING_MAIL_HOST
+        value: smtp.qq.com
+      - key: SPRING_MAIL_PORT
+        value: 587
+      - key: SPRING_MAIL_USERNAME
+        value: 1477129018@qq.com
+      - key: SPRING_MAIL_PASSWORD
+        value: qlmjfzjqvzjqiicd
+      - key: TMDB_API_KEY
+        value: 1ad3fcc3a67f178a8c8958896787f031 
