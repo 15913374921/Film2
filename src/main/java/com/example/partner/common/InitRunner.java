@@ -32,7 +32,7 @@ public class InitRunner implements ApplicationRunner {
         try {
             RedisUtils.ping(); // redis的数据探测，初始化连接
             // 在项目启东时进行一次数据库查询，防止懒加载
-            userMapper.select1();
+            // userMapper.select1();
             log.info("启动项目数据库连接成功");
             // 发送一次异步web请求，初始化web连接
             HttpUtil.get("http://localhost:9090/");
