@@ -3,6 +3,8 @@ services:
     name: partner-backend
     runtime: docker
     envVars:
+      - key: JAVA_TOOL_OPTIONS
+        value: "-Xmx1024m -Xms512m"
       - key: SPRING_PROFILES_ACTIVE
         value: prod
       - key: SPRING_DATASOURCE_URL
