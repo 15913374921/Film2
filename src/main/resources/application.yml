@@ -45,6 +45,7 @@ sa-token:
   token-style: uuid
   is-log: false
   is-print: false
+  jwt-secret-key: MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY # 这是一个随机生成的安全密钥
 
 # TMDB API配置
 tmdb:
