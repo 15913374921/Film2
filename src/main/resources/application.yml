@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://dpg-cuoe8p56147c73ccv3bg-a.oregon-postgres.render.com:5432/partner_s8nm?sslmode=require&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory&socketTimeout=30&tcpKeepAlive=true&connectTimeout=10
+    url: jdbc:postgresql://dpg-cuoe8p56147c73ccv3bg-a.oregon-postgres.render.com:5432/partner_s8nm?sslmode=require&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory&socketTimeout=30&tcpKeepAlive=true&connectTimeout=10&ApplicationName=partner_backend
     username: partner_s8nm_user
     password: DygTQBXr5F9fB8e5VMODMfmP9gpExvLV
     hikari:
@@ -17,6 +17,8 @@ spring:
       validation-timeout: 5000
       initialization-fail-timeout: 1000
       connection-init-sql: SET TIME ZONE 'UTC'
+      auto-commit: true
+      register-mbeans: true
   redis:
     host: localhost
     port: 6379
