@@ -10,4 +10,4 @@ WORKDIR /app
 COPY --from=0 /app/target/partner-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 9090
-CMD ["java", "-Xmx1024m", "-Xms512m", "-jar", "app.jar"] 
+CMD ["java", "-Xmx1024m", "-Xms512m", "--add-opens=java.base/java.nio=ALL-UNNAMED", "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED", "--add-opens=java.base/java.util=ALL-UNNAMED", "-jar", "app.jar"] 

@@ -4,7 +4,7 @@ services:
     runtime: docker
     envVars:
       - key: JAVA_TOOL_OPTIONS
-        value: "-Xmx1024m -Xms512m"
+        value: "-Xmx1024m -Xms512m --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED"
       - key: SPRING_PROFILES_ACTIVE
         value: prod
       - key: SPRING_DATASOURCE_URL
