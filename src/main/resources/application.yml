@@ -4,16 +4,19 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://dpg-cuoe8p56147c73ccv3bg-a.oregon-postgres.render.com:5432/partner_s8nm?sslmode=require&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
+    url: jdbc:postgresql://dpg-cuoe8p56147c73ccv3bg-a.oregon-postgres.render.com:5432/partner_s8nm?sslmode=require&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory&socketTimeout=30&tcpKeepAlive=true&connectTimeout=10
     username: partner_s8nm_user
     password: DygTQBXr5F9fB8e5VMODMfmP9gpExvLV
     hikari:
-      maximum-pool-size: 5
-      minimum-idle: 2
-      connection-timeout: 20000
-      idle-timeout: 300000
-      max-lifetime: 1200000
+      maximum-pool-size: 2
+      minimum-idle: 1
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
       connection-test-query: SELECT 1
+      validation-timeout: 5000
+      initialization-fail-timeout: 1000
+      connection-init-sql: SET TIME ZONE 'UTC'
   redis:
     host: localhost
     port: 6379
@@ -42,6 +45,11 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob.non_contextual_creation: true
+        connection:
+          provider_disables_autocommit: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
