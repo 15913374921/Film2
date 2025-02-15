@@ -2,16 +2,17 @@ services:
   - type: web
     name: partner-backend
     runtime: docker
-    plan: free
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
       - key: SPRING_DATASOURCE_URL
-        value: jdbc:mysql://localhost:3306/partner?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8&allowPublicKeyRetrieval=true
+        value: jdbc:postgresql://dpg-cuoe8p56147c73ccv3bg-a.oregon-postgres.render.com:5432/partner_s8nm
       - key: SPRING_DATASOURCE_USERNAME
-        value: root
+        value: partner_s8nm_user
       - key: SPRING_DATASOURCE_PASSWORD
-        value: 123456
+        value: DygTQBXr5F9fB8e5VMODMfmP9gpExvLV
+      - key: SPRING_DATASOURCE_DRIVER_CLASS_NAME
+        value: org.postgresql.Driver
       - key: SPRING_REDIS_HOST
         value: localhost
       - key: SPRING_REDIS_PORT
