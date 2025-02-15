@@ -36,4 +36,6 @@ services:
       - key: SPRING_MAIL_PASSWORD
         sync: false
       - key: TMDB_API_KEY
+        sync: false
+      - key: SA_TOKEN_JWT_SECRET_KEY
         sync: false 
