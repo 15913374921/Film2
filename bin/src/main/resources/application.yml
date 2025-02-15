@@ -1,0 +1,55 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://dpg-cuoe8p56147c73ccv3bg-a.oregon-postgres.render.com:5432/partner_s8nm
+    username: partner_s8nm_user
+    password: DygTQBXr5F9fB8e5VMODMfmP9gpExvLV
+  redis:
+    host: localhost
+    port: 6379
+    password: 
+    database: 0
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 1477129018@qq.com
+    password: qlmjfzjqvzjqiicd
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.example.partner.entity
+
+sa-token:
+  token-name: token
+  timeout: 2592000
+  active-timeout: -1
+  is-concurrent: true
+  is-share: true
+  token-style: uuid
+  is-log: false
+  is-print: false
+  jwt-secret-key: MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY # 这是一个随机生成的安全密钥
+
+# TMDB API配置
+tmdb:
+  api-key: 1ad3fcc3a67f178a8c8958896787f031
+  base-url: https://api.themoviedb.org/3
+  image-base-url: https://image.tmdb.org/t/p/
+  language: zh-CN 

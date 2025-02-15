@@ -31,3 +31,20 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Application Properties ###
+src/main/resources/application-prod.yml
+src/main/resources/application-dev.yml
+
+### Logs ###
+*.log
+logs/
+
+### Local env files ###
+.env
+.env.local
+.env.*.local
+
+### System Files ###
+.DS_Store
+Thumbs.db

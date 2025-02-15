@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ApiUrl {
     private final String BASE_URL = "https://api.themoviedb.org/3";
-    @Value("${tmdb.api.key}")
+    @Value("${tmdb.api-key}")
     private String apiKey;
     private final String MOVIE_POPULAR_URL = BASE_URL + "/movie/popular";
     private final String MOVIE_TRENDING_DAY_URL = BASE_URL + "/trending/movie/day";

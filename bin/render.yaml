@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: partner-backend
+    runtime: docker
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://dpg-cuoe8p56147c73ccv3bg-a.oregon-postgres.render.com:5432/partner_s8nm
+      - key: SPRING_DATASOURCE_USERNAME
+        value: partner_s8nm_user
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: DygTQBXr5F9fB8e5VMODMfmP9gpExvLV
+      - key: SPRING_DATASOURCE_DRIVER_CLASS_NAME
+        value: org.postgresql.Driver
+      - key: SPRING_REDIS_HOST
+        value: localhost
+      - key: SPRING_REDIS_PORT
+        value: 6379
+      - key: SPRING_REDIS_PASSWORD
+        value: ""
+      - key: SPRING_MAIL_HOST
+        value: smtp.qq.com
+      - key: SPRING_MAIL_PORT
+        value: 587
+      - key: SPRING_MAIL_USERNAME
+        value: 1477129018@qq.com
+      - key: SPRING_MAIL_PASSWORD
+        value: qlmjfzjqvzjqiicd
+      - key: TMDB_API_KEY
+        value: 1ad3fcc3a67f178a8c8958896787f031
+      - key: SA_TOKEN_JWT_SECRET_KEY
+        value: MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY 
